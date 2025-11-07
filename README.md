@@ -1,4 +1,4 @@
-cat > README.md <<'EOF'
+
 # Hand-Gesture Controlled Car
 
 This project describes building a gesture-controlled vehicle prototype using an MPU6050 sensor and NRF24L01 modules for wireless communication.
