@@ -1,58 +1,53 @@
-# Mașină Controlată prin Mișcările Mâinii
+cat > README.md <<'EOF'
+# Hand-Gesture Controlled Car
 
-Acest proiect detaliază crearea unui prototip de vehicul controlat prin gesturi, utilizând un senzor MPU6050 și module NRF24L01 pentru comunicare wireless.
+This project describes building a gesture-controlled vehicle prototype using an MPU6050 sensor and NRF24L01 modules for wireless communication.
 
-## Scopul Proiectului
+## Project Goal
+The project aims to implement an intuitive control system based on natural hand movements.
 
-Proiectul își propune să implementeze un sistem de control intuitiv bazat pe mișcările naturale ale mâinii.
+## Key Features
+- **Motion detection:** Use the MPU6050 sensor to convert hand movements into direction commands (forward, backward, left, right).
+- **Command transmission:** Wireless communication between the controller and the vehicle using NRF24L01 modules.
+- **Vehicle response:** Precise control of DC motors via the L298N driver for steering and motion.
 
-## Funcționalități Principale
-
-- **Detectarea mișcărilor:** Utilizarea senzorului MPU6050 pentru a converti mișcările mâinii în comenzi de direcție (înainte, înapoi, stânga, dreapta).
-- **Transmiterea comenzilor:** Comunicarea fără fir între controller și vehicul utilizând module NRF24L01.
-- **Reacția vehiculului:** Control precis al motoarelor DC prin driver-ul L298N pentru direcție și mișcare.
-
-## Instrumente Utilizate
+## Tools Used
 
 ### Hardware
-- 2 plăci Arduino Nano
-- 1 senzor MPU6050
-- 2 module NRF24L01
-- 4 motoare DC
-- 1 driver L298N
-- Șasiu pentru vehicul
-- Surse de alimentare (baterii)
+- 2 Arduino Nano boards
+- 1 MPU6050 sensor
+- 2 NRF24L01 modules
+- 4 DC motors
+- 1 L298N driver
+- Vehicle chassis
+- Power sources (batteries)
 
 ### Software
-- **Arduino IDE:** Programare și încărcare cod pe plăcile Arduino.
-- **Biblioteci utilizate:**
+- **Arduino IDE:** Programming and uploading code to the Arduino boards.
+- **Libraries used:**
   - `Wire.h`
   - `MPU6050.h`
   - `RF24.h`
 
-## Probleme Nerezolvate
+## Unresolved Issues
+- No proximity sensors for obstacle detection.
+- Limited precision when turning.
+- Interface may be difficult to use for people with complex motor impairments.
+- No AI integration yet for autonomous navigation or adaptive control.
 
-- Lipsa senzorilor de proximitate pentru detectarea obstacolelor.
-- Control limitat al preciziei în viraje.
-- Interfață dificil de utilizat pentru utilizatorii cu dizabilități motorii complexe.
-- Integrarea inteligenței artificiale pentru navigare autonomă și adaptarea controlului la utilizator.
+## How to Use
+1. Insert 6 AA batteries into the vehicle’s holder and switch it ON.
+2. Strap the remote to your hand and turn on its switch.
+3. Control the vehicle with your hand movements to test functionality.
 
-## Utilizare
+## Results
+- Fast response (100–200 ms) from gesture to vehicle movement.
+- Stable communication in open space up to ~15 meters.
+- Battery life: ~45 minutes for the vehicle and ~2 hours for the remote.
 
-1. Introduceți 6 baterii AA în suportul vehiculului și apăsați comutatorul pe poziția ON.
-2. Puneți telecomanda pe mână și activați comutatorul dedicat.
-3. Controlați vehiculul prin mișcările mâinii pentru a testa funcționalitatea.
+## Contributions
+Contributions are welcome! Please open an issue or submit a pull request with improvement suggestions.
 
-## Rezultate Obținute
-
-- Răspuns rapid (100-200 ms) între gesturi și mișcarea vehiculului.
-- Stabilitate a comunicării în spațiu deschis până la 15 metri.
-- Autonomie: ~45 minute pentru vehicul și ~2 ore pentru telecomandă.
-
-## Contribuții
-
-Contribuțiile sunt binevenite! Vă rugăm să deschideți un issue sau să creați un pull request pentru sugestii de îmbunătățire.
-
-## Resurse
-
-- Documentația completă și codul sursă pot fi accesate pe [GitHub](https://github.com/ioana333/Masina-controlata-prin-gesturile-mainii).
+## Resources
+- Full documentation and source code are available on GitHub: https://github.com/ioana333/Masina-controlata-prin-gesturile-mainii
+EOF
